@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Page Loader -->
+{% include 'partials/_loader.html' %}
+
+<main style="padding-top: 5rem; overflow-x: hidden;">
+    <!-- Navigation -->
+    {% include 'partials/_navbar.html' %}
+
+    <!-- Hero Section -->
+    {% include 'partials/_hero.html' %}
+
+    <!-- Statistics -->
+    {% include 'partials/_stats.html' %}
+
+    <!-- About Section -->
+    {% include 'partials/_about.html' %}
+
+    <!-- Benefits Section -->
+    {% include 'partials/_benefits.html' %}
+
+    <!-- Subsidy Section -->
+    {% include 'partials/_subsidy.html' %}
+
+    <!-- Calculator Section -->
+    {% include 'partials/_calculator.html' %}
+
+    <!-- Eligibility Section -->
+    {% include 'partials/_eligibility.html' %}
+
+    <!-- Documents Section -->
+    {% include 'partials/_documents.html' %}
+
+    <!-- Process Section -->
+    {% include 'partials/_process.html' %}
+
+    <!-- FAQs Section -->
+    {% include 'partials/_faqs.html' %}
+
+    <!-- Contact Section -->
+    {% include 'partials/_contact.html' %}
+
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+</main>
+
+<!-- Modals and Indicators -->
+{% include 'partials/_modals.html' %}
+{% endblock %}

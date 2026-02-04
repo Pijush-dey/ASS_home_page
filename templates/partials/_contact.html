@@ -1,0 +1,135 @@
+{% load static %}
+<section class="py-12 md:py-20 bg-surface-light dark:bg-surface-dark" id="contact">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-brand-blue rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+            <div
+                class="lg:w-1/2 p-6 md:p-10 lg:p-12 text-white flex flex-col justify-between animate-on-scroll slide-right">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Get Free Solar Consultation</h2>
+                    <p class="text-blue-100 mb-8">Speak to our experts today. We analyze your requirements and
+                        provide a customized proposal.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <span class="material-icons-outlined bg-white/10 p-2 rounded-lg mr-4">call</span>
+                            <div>
+                                <a href="tel:+919433133074" class="hover:text-primary transition-colors">
+                                    <p class="text-xs text-blue-200">Call Us Now</p>
+                                    <p class="font-bold">+91 94331 33074</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons-outlined bg-white/10 p-2 rounded-lg mr-4">email</span>
+                            <div>
+                                <a href="mailto:ayushsolarsolution@gmail.com"
+                                    class="hover:text-primary transition-colors font-bold">
+                                    ayushsolarsolution@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons-outlined bg-white/10 p-2 rounded-lg mr-4">location_on</span>
+                            <div>
+                                <p class="text-xs text-blue-200">Visit Us</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Gokulpur+Kalyani+Nadia+Kolkata+741250"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="hover:text-blue-200 transition-colors">
+                                    <p class="font-bold">Gokulpur, Kalyani, Nadia, Kolkata - 741250</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex gap-4">
+                    <a href="tel:+919433133074"
+                        class="group flex-1 bg-white text-brand-blue py-3.5 rounded-xl font-bold transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 active:scale-95 border border-blue-50 flex items-center justify-center">
+                        <span
+                            class="flex items-center justify-center gap-2 group-hover:text-blue-600 transition-colors">
+                            <span
+                                class="material-icons-outlined text-xl group-hover:rotate-12 transition-transform">call</span>
+                            Call Now
+                        </span>
+                    </a>
+                    <a href="https://wa.me/919876543210?text=I%20am%20interested%20in%20solar%20installation"
+                        class="group flex-1 bg-brand-green text-white py-3.5 rounded-xl font-bold transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-green-500/30 hover:-translate-y-1 active:scale-95 flex items-center justify-center">
+                        <span class="flex items-center justify-center gap-2">
+                            <span
+                                class="material-icons-outlined text-xl group-hover:rotate-12 transition-transform">chat</span>
+                            WhatsApp
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 bg-white dark:bg-gray-800 p-6 md:p-10 lg:p-12 w-full animate-on-scroll slide-left">
+                <form class="space-y-6" id="consultation-form">
+                    {% csrf_token %}
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full
+                            Name</label>
+                        <input name="full_name"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                            placeholder="John Doe" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mobile
+                            Number</label>
+                        <input name="mobile_number"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                            placeholder="10-digit number" type="tel" pattern="[0-9]{10}" required />
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">District</label>
+                            <select name="district"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                                required>
+                                <option value="">Select District</option>
+                                <option>Alipurduar</option>
+                                <option>Bankura</option>
+                                <option>Birbhum</option>
+                                <option>Cooch Behar</option>
+                                <option>Dakshin Dinajpur</option>
+                                <option>Darjeeling</option>
+                                <option>Hooghly</option>
+                                <option>Howrah</option>
+                                <option>Jalpaiguri</option>
+                                <option>Jhargram</option>
+                                <option>Kalimpong</option>
+                                <option>Kolkata</option>
+                                <option>Malda</option>
+                                <option>Murshidabad</option>
+                                <option>Nadia</option>
+                                <option>North 24 Parganas</option>
+                                <option>Paschim Bardhaman</option>
+                                <option>Paschim Medinipur</option>
+                                <option>Purba Bardhaman</option>
+                                <option>Purba Medinipur</option>
+                                <option>Purulia</option>
+                                <option>South 24 Parganas</option>
+                                <option>Uttar Dinajpur</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">PIN
+                                Code</label>
+                            <input name="pin_code"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                                type="text" pattern="[0-9]{6}" required />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message
+                            (Optional)</label>
+                        <textarea name="message"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary"
+                            placeholder="How can we help you?" rows="3"></textarea>
+                    </div>
+                    <button
+                        class="w-full bg-primary text-white font-bold py-3 rounded-lg shadow-lg hover:bg-orange-600 transition transform hover:-translate-y-1 active:scale-[0.98]"
+                        type="submit">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

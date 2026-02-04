@@ -1,0 +1,33 @@
+{% load static %}
+    <!-- Modal Backdrop -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-black/60 z-[1000] hidden opacity-0 transition-opacity duration-300"
+        onclick="closeSuccessModal()"></div>
+
+    <!-- Success Modal -->
+    <div id="success-modal"
+        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1001] w-[90%] max-w-md hidden translate-y-10 opacity-0 transition-all duration-300">
+        <div
+            class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-8 text-center border border-gray-100 dark:border-slate-700">
+            <div
+                class="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="material-icons-outlined text-green-500 text-5xl">check_circle</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Application Submitted!</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                Thank you for choosing Ayush Solar Solutions. Our technical team will review your details and contact
+                you shortly.
+            </p>
+            <button onclick="closeSuccessModal()"
+                class="w-full bg-brand-green text-white font-bold py-3 rounded-xl shadow-lg hover:bg-green-600 transition transform hover:-translate-y-1">
+                Got it, Thank You!
+            </button>
+        </div>
+    </div>
+
+    <!-- Global Persistent Scroll Indicator -->
+    <div id="persistent-scroll-indicator"
+        class="fixed bottom-6 left-0 right-0 flex flex-col items-center animate-bounce cursor-pointer z-[40] opacity-60 hover:opacity-100 transition-opacity duration-500">
+        <span
+            class="text-[10px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] mb-1">Scroll</span>
+        <span class="material-icons-outlined text-primary text-3xl">keyboard_double_arrow_down</span>
+    </div>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{% block title %}Ayush Solar Solutions{% endblock %}</title>
+    <meta
+        content="Ayush Solar Solutions - Premier rooftop solar installation services in West Bengal. PM Surya Ghar Yojana subsidy calculator and expert installation."
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="{% static 'images/favicon_rounded.png' %}" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F7931E", // Solar Orange
+                        "brand-green": "#6DBE45", // Leaf Green
+                        "brand-blue": "#1F4FA3", // Deep Blue
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a", // Slate 900
+                        "surface-light": "#f3f4f6", // Gray 100
+                        "surface-dark": "#1e293b", // Slate 800
+                        "card-dark": "#1f2937", // Gray 800
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-body transition-colors duration-300"
+    style="overflow-x: hidden;">
+
+    {% block content %}{% endblock %}
+
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

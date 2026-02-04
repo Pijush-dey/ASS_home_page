@@ -1,0 +1,112 @@
+{% load static %}
+<nav
+    class="fixed top-0 left-0 w-full max-w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 shadow-sm h-20">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <a href="#home" class="flex-shrink-0 flex items-center gap-3 group">
+                <img src="{% static 'images/ayush_solar_logo1.png' %}" alt="Ayush Solar Logo"
+                    class="h-12 w-auto rounded-full shadow-sm group-hover:scale-105 transition-transform duration-300">
+                <div class="flex flex-col">
+                    <span
+                        class="font-black text-xl tracking-tight text-gray-900 dark:text-white uppercase leading-none">Ayush</span>
+                    <span class="text-xs font-bold text-brand-green tracking-widest uppercase">Solar
+                        Solutions</span>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition"
+                    href="#home">Home</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition"
+                    href="#about">About</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition"
+                    href="#benefits">Benefits</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition"
+                    href="#subsidy">Subsidy</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition text-sm"
+                    href="#eligibility">Eligibility</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition text-sm"
+                    href="#documents">Documents</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition text-sm"
+                    href="#process">Process</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition"
+                    href="#faqs">FAQs</a>
+                <a class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition"
+                    href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition text-gray-600 dark:text-gray-400"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-icons-outlined block dark:hidden">dark_mode</span>
+                    <span class="material-icons-outlined hidden dark:block">light_mode</span>
+                </button>
+                <a class="hidden lg:inline-flex items-center justify-center px-8 py-2.5 border border-transparent text-sm font-bold rounded-full text-white bg-primary hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/30 hover:ring-2 hover:ring-orange-300 active:scale-95"
+                    href="#calculator">
+                    Calculate Subsidy
+                </a>
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-primary transition"
+                    onclick="toggleMobileMenu(true)">
+                    <span class="material-icons-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu Backdrop -->
+<div id="mobile-menu-backdrop"
+    class="fixed inset-0 bg-black/50 z-[90] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+    onclick="toggleMobileMenu(false)"></div>
+
+<!-- Mobile Menu Overlay (Side Drawer) -->
+<div id="mobile-menu"
+    class="fixed top-0 right-0 w-[300px] sm:w-[350px] max-w-full h-screen z-[999] bg-white dark:bg-slate-900 border-l border-gray-100 dark:border-slate-800 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden shadow-2xl">
+    <div class="flex flex-col h-full">
+        <div class="flex items-center justify-center p-6 border-b border-gray-100 dark:border-slate-800 relative">
+            <div class="flex items-center gap-3 mr-auto">
+                <img src="{% static 'images/ayush_solar_logo1.png' %}" alt="Ayush Solar Logo"
+                    class="h-10 w-auto rounded-full">
+                <div class="flex flex-col">
+                    <span
+                        class="font-black text-lg tracking-tight text-gray-900 dark:text-white uppercase leading-none">Ayush</span>
+                    <span class="text-[0.6rem] font-bold text-brand-green tracking-widest uppercase">Solar
+                        Solutions</span>
+                </div>
+            </div>
+            <button
+                class="absolute right-6 top-6 p-2 text-gray-500 hover:text-primary hover:bg-gray-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200 transform active:scale-50 active:bg-gray-200 dark:active:bg-slate-700"
+                onclick="setTimeout(() => toggleMobileMenu(false), 300)">
+                <span class="material-icons-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto py-8 px-6">
+            <div class="space-y-4 pb-12">
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#home" onclick="toggleMobileMenu(false)">Home</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#about" onclick="toggleMobileMenu(false)">About</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#benefits" onclick="toggleMobileMenu(false)">Benefits</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#subsidy" onclick="toggleMobileMenu(false)">Subsidy</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#eligibility" onclick="toggleMobileMenu(false)">Eligibility</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#documents" onclick="toggleMobileMenu(false)">Documents</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#process" onclick="toggleMobileMenu(false)">Process</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#faqs" onclick="toggleMobileMenu(false)">FAQs</a>
+                <a class="mobile-nav-link block text-lg font-extrabold text-[#111827] dark:text-white hover:text-primary transition p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800"
+                    href="#contact" onclick="toggleMobileMenu(false)">Contact</a>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 dark:border-slate-800">
+            <a class="flex items-center justify-center w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-orange-600 hover:shadow-orange-500/30 transition-all duration-200 transform active:scale-90 active:shadow-inner"
+                href="#calculator" onclick="setTimeout(() => toggleMobileMenu(false), 300)">
+                Calculate Subsidy
+            </a>
+        </div>
+    </div>
+</div>

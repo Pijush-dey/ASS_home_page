@@ -1,0 +1,26 @@
+{% load static %}
+<!-- Page Loading Screen -->
+<div id="page-loader"
+    class="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-background-dark transition-opacity duration-500">
+    <div class="flex flex-col items-center">
+        <!-- Logo with pulse animation -->
+        <div class="relative">
+            <img src="{% static 'images/ayush_solar_logo1.png' %}" alt="Loading..."
+                class="h-24 w-auto rounded-full shadow-2xl animate-pulse" />
+            <!-- Rotating ring around logo -->
+            <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-primary border-r-primary animate-spin"
+                style="animation-duration: 1.5s;"></div>
+        </div>
+        <!-- Company name -->
+        <div class="mt-6 text-center">
+            <p class="font-black text-2xl text-gray-900 dark:text-white uppercase tracking-tight">Ayush</p>
+            <p class="text-xs font-bold text-brand-green tracking-widest uppercase">Solar Solutions</p>
+        </div>
+        <!-- Loading dots animation -->
+        <div class="mt-4 flex space-x-2">
+            <span class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 0ms;"></span>
+            <span class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 150ms;"></span>
+            <span class="w-2 h-2 bg-primary rounded-full animate-bounce" style="animation-delay: 300ms;"></span>
+        </div>
+    </div>
+</div>
